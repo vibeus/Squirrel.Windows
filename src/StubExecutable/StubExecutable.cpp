@@ -125,7 +125,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	if (!CreateProcess(NULL, lpCommandLine, NULL, NULL, true, 0, NULL, lpCurrentDirectory, &si, &pi)) {
 		return -1;
 	}
-
+	
+	WaitForSingleObject(pi.hProcess, INFINITE);
 	AllowSetForegroundWindow(pi.dwProcessId);
 	WaitForInputIdle(pi.hProcess, 5 * 1000);
 	return 0;
