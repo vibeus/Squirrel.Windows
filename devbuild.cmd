@@ -19,7 +19,9 @@ if "%_INIT%"=="1" git submodule update --init --recursive
 
 nuget restore
 
-msbuild -Restore %_C% -m -nr:false -v:m
+set _PLATFORM=/p:Platform=x64
+
+msbuild -Restore %_C% %_PLATFORM% -m -nr:false -v:m
 
 :end
 popd

@@ -39,7 +39,7 @@ For the impatient:
 ```sh
 git clone --recursive https://github.com/squirrel/squirrel.windows
 cd squirrel.windows
-devbuild.cmd
+.\devbuild.cmd release
 ```
 See [Contributing](docs/contributing/contributing.md) for additional information on building and contributing to Squirrel.
 
